@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="addChitiethdAndUpdateTongtien" type="tns:addChitiethdAndUpdateTongtien"/>
+
+<xs:element name="calculateTotalAmount" type="tns:calculateTotalAmount"/>
+
+<xs:element name="calculateTotalAmountResponse" type="tns:calculateTotalAmountResponse"/>
+
+<xs:element name="checkIfItemExistsInOrder" type="tns:checkIfItemExistsInOrder"/>
+
+<xs:element name="checkIfItemExistsInOrderResponse" type="tns:checkIfItemExistsInOrderResponse"/>
+
+<xs:element name="countOrderDetails" type="tns:countOrderDetails"/>
+
+<xs:element name="countOrderDetailsResponse" type="tns:countOrderDetailsResponse"/>
+
+<xs:element name="deleteCTHD" type="tns:deleteCTHD"/>
+
+<xs:element name="deleteChiTietHD" type="tns:deleteChiTietHD"/>
+
+<xs:element name="getCT" type="tns:getCT"/>
+
+<xs:element name="getCTResponse" type="tns:getCTResponse"/>
+
+<xs:element name="getTableDetailsFromChitiethd" type="tns:getTableDetailsFromChitiethd"/>
+
+<xs:element name="getTableDetailsFromChitiethdResponse" type="tns:getTableDetailsFromChitiethdResponse"/>
+
+<xs:element name="updateExistingItemInOrder" type="tns:updateExistingItemInOrder"/>
+
+<xs:complexType name="updateExistingItemInOrder">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+<xs:element name="tenmon" type="xs:string" minOccurs="0"/>
+<xs:element name="soluong" type="xs:int"/>
+<xs:element name="thanhtien" type="xs:float"/>
+<xs:element name="loaiMon" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTableDetailsFromChitiethd">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTableDetailsFromChitiethdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:chitiethdmodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="chitiethdmodel">
+<xs:sequence>
+<xs:element name="idhd" type="xs:int"/>
+<xs:element name="soluong" type="xs:int"/>
+<xs:element name="tenmon" type="xs:string" minOccurs="0"/>
+<xs:element name="thanhtien" type="xs:float"/>
+<xs:element name="theloai" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCT">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCTResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:chitiethdmodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCTHD">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkIfItemExistsInOrder">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+<xs:element name="tenmon" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkIfItemExistsInOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countOrderDetails">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countOrderDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateTotalAmount">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateTotalAmountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addChitiethdAndUpdateTongtien">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+<xs:element name="tenmon" type="xs:string" minOccurs="0"/>
+<xs:element name="soluong" type="xs:int"/>
+<xs:element name="thanhtien" type="xs:float"/>
+<xs:element name="loaiMon" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteChiTietHD">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+<xs:element name="tenmon" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

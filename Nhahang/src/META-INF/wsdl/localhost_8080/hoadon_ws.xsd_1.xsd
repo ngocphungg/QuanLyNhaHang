@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="addNewHoaDon" type="tns:addNewHoaDon"/>
+
+<xs:element name="addNewHoaDonResponse" type="tns:addNewHoaDonResponse"/>
+
+<xs:element name="deleteHoadon" type="tns:deleteHoadon"/>
+
+<xs:element name="getAllDoanhThuNgay" type="tns:getAllDoanhThuNgay"/>
+
+<xs:element name="getAllDoanhThuNgayResponse" type="tns:getAllDoanhThuNgayResponse"/>
+
+<xs:element name="getAllDoanhThuNgayTang" type="tns:getAllDoanhThuNgayTang"/>
+
+<xs:element name="getAllDoanhThuNgayTangResponse" type="tns:getAllDoanhThuNgayTangResponse"/>
+
+<xs:element name="getAllHoadonIDs" type="tns:getAllHoadonIDs"/>
+
+<xs:element name="getAllHoadonIDsResponse" type="tns:getAllHoadonIDsResponse"/>
+
+<xs:element name="getCurrentHoadonID" type="tns:getCurrentHoadonID"/>
+
+<xs:element name="getCurrentHoadonIDResponse" type="tns:getCurrentHoadonIDResponse"/>
+
+<xs:element name="getHoadon" type="tns:getHoadon"/>
+
+<xs:element name="getHoadonResponse" type="tns:getHoadonResponse"/>
+
+<xs:element name="getHoadonStatus" type="tns:getHoadonStatus"/>
+
+<xs:element name="getHoadonStatusResponse" type="tns:getHoadonStatusResponse"/>
+
+<xs:element name="getIDInfoFromHoadon" type="tns:getIDInfoFromHoadon"/>
+
+<xs:element name="getIDInfoFromHoadonResponse" type="tns:getIDInfoFromHoadonResponse"/>
+
+<xs:element name="getIdhoadonsTheoNgay" type="tns:getIdhoadonsTheoNgay"/>
+
+<xs:element name="getIdhoadonsTheoNgayResponse" type="tns:getIdhoadonsTheoNgayResponse"/>
+
+<xs:element name="getIdhoadonsTheoNgayTang" type="tns:getIdhoadonsTheoNgayTang"/>
+
+<xs:element name="getIdhoadonsTheoNgayTangResponse" type="tns:getIdhoadonsTheoNgayTangResponse"/>
+
+<xs:element name="getStatusInfoFromHoadon" type="tns:getStatusInfoFromHoadon"/>
+
+<xs:element name="getStatusInfoFromHoadonResponse" type="tns:getStatusInfoFromHoadonResponse"/>
+
+<xs:element name="getTongTienByIdHoadon" type="tns:getTongTienByIdHoadon"/>
+
+<xs:element name="getTongTienByIdHoadonResponse" type="tns:getTongTienByIdHoadonResponse"/>
+
+<xs:element name="getUnpaidHoadonID" type="tns:getUnpaidHoadonID"/>
+
+<xs:element name="getUnpaidHoadonIDResponse" type="tns:getUnpaidHoadonIDResponse"/>
+
+<xs:element name="getgioden" type="tns:getgioden"/>
+
+<xs:element name="getgiodenResponse" type="tns:getgiodenResponse"/>
+
+<xs:element name="getgiove" type="tns:getgiove"/>
+
+<xs:element name="getgioveResponse" type="tns:getgioveResponse"/>
+
+<xs:element name="updatePaymentHoadon" type="tns:updatePaymentHoadon"/>
+
+<xs:element name="updateTotalAmount" type="tns:updateTotalAmount"/>
+
+<xs:complexType name="getIDInfoFromHoadon">
+<xs:sequence>
+<xs:element name="tenban" type="xs:string" minOccurs="0"/>
+<xs:element name="khuvuc" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIDInfoFromHoadonResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStatusInfoFromHoadon">
+<xs:sequence>
+<xs:element name="tenban" type="xs:string" minOccurs="0"/>
+<xs:element name="khuvuc" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStatusInfoFromHoadonResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllDoanhThuNgayTang">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllDoanhThuNgayTangResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:doanhThuModel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="doanhThuModel">
+<xs:sequence>
+<xs:element name="ngay" type="xs:string" minOccurs="0"/>
+<xs:element name="soLuongHoaDon" type="xs:int"/>
+<xs:element name="tongThu" type="xs:float"/>
+<xs:element name="trungBinhMoiBan" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIdhoadonsTheoNgay">
+<xs:sequence>
+<xs:element name="dayfrom" type="xs:string" minOccurs="0"/>
+<xs:element name="monthfrom" type="xs:string" minOccurs="0"/>
+<xs:element name="yearfrom" type="xs:string" minOccurs="0"/>
+<xs:element name="dayto" type="xs:string" minOccurs="0"/>
+<xs:element name="monthto" type="xs:string" minOccurs="0"/>
+<xs:element name="yearto" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIdhoadonsTheoNgayResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:doanhThuModel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTongTienByIdHoadon">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTongTienByIdHoadonResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getgioden">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getgiodenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIdhoadonsTheoNgayTang">
+<xs:sequence>
+<xs:element name="dayfrom" type="xs:string" minOccurs="0"/>
+<xs:element name="monthfrom" type="xs:string" minOccurs="0"/>
+<xs:element name="yearfrom" type="xs:string" minOccurs="0"/>
+<xs:element name="dayto" type="xs:string" minOccurs="0"/>
+<xs:element name="monthto" type="xs:string" minOccurs="0"/>
+<xs:element name="yearto" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIdhoadonsTheoNgayTangResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:doanhThuModel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getHoadon">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getHoadonResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:hoadonmodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hoadonmodel">
+<xs:sequence>
+<xs:element name="gioden" type="xs:string" minOccurs="0"/>
+<xs:element name="giove" type="xs:string" minOccurs="0"/>
+<xs:element name="khuvuc" type="xs:string" minOccurs="0"/>
+<xs:element name="mahd" type="xs:string" minOccurs="0"/>
+<xs:element name="tenban" type="xs:string" minOccurs="0"/>
+<xs:element name="tongtien" type="xs:float"/>
+<xs:element name="trangthai" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteHoadon">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllDoanhThuNgay">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllDoanhThuNgayResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:doanhThuModel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getHoadonStatus">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getHoadonStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllHoadonIDs">
+<xs:sequence>
+<xs:element name="tenban" type="xs:string" minOccurs="0"/>
+<xs:element name="khuVuc" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllHoadonIDsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTotalAmount">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+<xs:element name="totalAmount" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNewHoaDon">
+<xs:sequence>
+<xs:element name="tenban" type="xs:string" minOccurs="0"/>
+<xs:element name="gioden" type="xs:string" minOccurs="0"/>
+<xs:element name="khuvuc" type="xs:string" minOccurs="0"/>
+<xs:element name="tongtien" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNewHoaDonResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrentHoadonID">
+<xs:sequence>
+<xs:element name="tenban" type="xs:string" minOccurs="0"/>
+<xs:element name="khuVuc" type="xs:string" minOccurs="0"/>
+<xs:element name="trangthai" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrentHoadonIDResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getgiove">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getgioveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePaymentHoadon">
+<xs:sequence>
+<xs:element name="idhoadon" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnpaidHoadonID">
+<xs:sequence>
+<xs:element name="tenban" type="xs:string" minOccurs="0"/>
+<xs:element name="khuVuc" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUnpaidHoadonIDResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="td_ws">
+      <implementation-class>ws.td_ws</implementation-class>
+    </service>
+    <service name="hoadon_ws">
+      <implementation-class>ws.hoadon_ws</implementation-class>
+    </service>
+    <service name="chitiethd_ws">
+      <implementation-class>ws.chitiethd_ws</implementation-class>
+    </service>
+    <service name="dt_ws">
+      <implementation-class>ws.dt_ws</implementation-class>
+    </service>
+    <service name="dtngay_ws">
+      <implementation-class>ws.dtngay_ws</implementation-class>
+    </service>
+    <service name="nv_ws">
+      <implementation-class>ws.nv_ws</implementation-class>
+    </service>
+    <service name="sp_ws">
+      <implementation-class>ws.sp_ws</implementation-class>
+    </service>
+    <service name="tk_ws">
+      <implementation-class>ws.tk_ws</implementation-class>
+    </service>
+    <service name="login_ws">
+      <implementation-class>ws.login_ws</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

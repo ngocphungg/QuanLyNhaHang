@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="findsp" type="tns:findsp"/>
+
+<xs:element name="findspResponse" type="tns:findspResponse"/>
+
+<xs:element name="getDeletesp" type="tns:getDeletesp"/>
+
+<xs:element name="getSanpham" type="tns:getSanpham"/>
+
+<xs:element name="getSanphamResponse" type="tns:getSanphamResponse"/>
+
+<xs:element name="getThemsp" type="tns:getThemsp"/>
+
+<xs:element name="getUpdatesp" type="tns:getUpdatesp"/>
+
+<xs:complexType name="getSanpham">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSanphamResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:spmodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="spmodel">
+<xs:sequence>
+<xs:element name="chiphi" type="xs:float"/>
+<xs:element name="donvi" type="xs:string" minOccurs="0"/>
+<xs:element name="masp" type="xs:string" minOccurs="0"/>
+<xs:element name="ngaynhap" type="xs:string" minOccurs="0"/>
+<xs:element name="soluong" type="xs:int"/>
+<xs:element name="tensp" type="xs:string" minOccurs="0"/>
+<xs:element name="tongchiphi" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThemsp">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+<xs:element name="b" type="xs:string" minOccurs="0"/>
+<xs:element name="c" type="xs:string" minOccurs="0"/>
+<xs:element name="d" type="xs:string" minOccurs="0"/>
+<xs:element name="e" type="xs:int"/>
+<xs:element name="f" type="xs:float"/>
+<xs:element name="g" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findsp">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findspResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:spmodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDeletesp">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUpdatesp">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+<xs:element name="b" type="xs:string" minOccurs="0"/>
+<xs:element name="c" type="xs:string" minOccurs="0"/>
+<xs:element name="d" type="xs:string" minOccurs="0"/>
+<xs:element name="e" type="xs:int"/>
+<xs:element name="f" type="xs:float"/>
+<xs:element name="g" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

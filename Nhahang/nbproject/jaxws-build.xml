@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-td_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/td_ws"/>
+        <property name="wsdl-td_ws" location="xml-resources/web-service-references/td_ws/wsdl/localhost_8080/td_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/td_ws" destdir="${build.generated.dir}/jax-wsCache/td_ws" wsdl="${wsdl-td_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/td_ws?WSDL" xnocompile="true" xendorsed="true" package="ThucDon">
+            <depends file="${wsdl-td_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/td_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/td_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-td_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/td_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ThucDon"/>
+    </target>
+    <target name="wsimport-client-dtngay_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/dtngay_ws"/>
+        <property name="wsdl-dtngay_ws" location="xml-resources/web-service-references/dtngay_ws/wsdl/localhost_8080/dtngay_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/dtngay_ws" destdir="${build.generated.dir}/jax-wsCache/dtngay_ws" wsdl="${wsdl-dtngay_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/dtngay_ws?WSDL" xnocompile="true" xendorsed="true" package="DoanhThuNgay">
+            <depends file="${wsdl-dtngay_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/dtngay_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/dtngay_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-dtngay_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/dtngay_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/DoanhThuNgay"/>
+    </target>
+    <target name="wsimport-client-chitiethd_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/chitiethd_ws"/>
+        <property name="wsdl-chitiethd_ws" location="xml-resources/web-service-references/chitiethd_ws/wsdl/localhost_8080/chitiethd_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/chitiethd_ws" destdir="${build.generated.dir}/jax-wsCache/chitiethd_ws" wsdl="${wsdl-chitiethd_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/chitiethd_ws?WSDL" xnocompile="true" xendorsed="true" package="ChitietHD">
+            <depends file="${wsdl-chitiethd_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/chitiethd_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/chitiethd_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-chitiethd_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/chitiethd_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ChitietHD"/>
+    </target>
+    <target name="wsimport-client-sp_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/sp_ws"/>
+        <property name="wsdl-sp_ws" location="xml-resources/web-service-references/sp_ws/wsdl/localhost_8080/sp_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/sp_ws" destdir="${build.generated.dir}/jax-wsCache/sp_ws" wsdl="${wsdl-sp_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/sp_ws?WSDL" xnocompile="true" xendorsed="true" package="SanPham">
+            <depends file="${wsdl-sp_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/sp_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/sp_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-sp_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/sp_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/SanPham"/>
+    </target>
+    <target name="wsimport-client-tk_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/tk_ws"/>
+        <property name="wsdl-tk_ws" location="xml-resources/web-service-references/tk_ws/wsdl/localhost_8080/tk_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/tk_ws" destdir="${build.generated.dir}/jax-wsCache/tk_ws" wsdl="${wsdl-tk_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/tk_ws?WSDL" xnocompile="true" xendorsed="true" package="TaiKhoan">
+            <depends file="${wsdl-tk_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/tk_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/tk_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-tk_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/tk_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/TaiKhoan"/>
+    </target>
+    <target name="wsimport-client-nv_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/nv_ws"/>
+        <property name="wsdl-nv_ws" location="xml-resources/web-service-references/nv_ws/wsdl/localhost_8080/nv_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/nv_ws" destdir="${build.generated.dir}/jax-wsCache/nv_ws" wsdl="${wsdl-nv_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/nv_ws?WSDL" xnocompile="true" xendorsed="true" package="NhanVien">
+            <depends file="${wsdl-nv_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/nv_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/nv_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-nv_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/nv_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/NhanVien"/>
+    </target>
+    <target name="wsimport-client-login_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/login_ws"/>
+        <property name="wsdl-login_ws" location="xml-resources/web-service-references/login_ws/wsdl/localhost_8080/login_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/login_ws" destdir="${build.generated.dir}/jax-wsCache/login_ws" wsdl="${wsdl-login_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/login_ws?WSDL" xnocompile="true" xendorsed="true" package="DangNhap">
+            <depends file="${wsdl-login_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/login_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/login_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-login_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/login_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/DangNhap"/>
+    </target>
+    <target name="wsimport-client-hoadon_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/hoadon_ws"/>
+        <property name="wsdl-hoadon_ws" location="xml-resources/web-service-references/hoadon_ws/wsdl/localhost_8080/hoadon_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/hoadon_ws" destdir="${build.generated.dir}/jax-wsCache/hoadon_ws" wsdl="${wsdl-hoadon_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/hoadon_ws?WSDL" xnocompile="true" xendorsed="true" package="HoaDon">
+            <depends file="${wsdl-hoadon_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/hoadon_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/hoadon_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-hoadon_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/hoadon_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/HoaDon"/>
+    </target>
+    <target name="wsimport-client-dt_ws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/dt_ws"/>
+        <property name="wsdl-dt_ws" location="xml-resources/web-service-references/dt_ws/wsdl/localhost_8080/dt_ws.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/dt_ws" destdir="${build.generated.dir}/jax-wsCache/dt_ws" wsdl="${wsdl-dt_ws}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/dt_ws?WSDL" xnocompile="true" xendorsed="true" package="DoanhThu">
+            <depends file="${wsdl-dt_ws}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/dt_ws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/dt_ws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-dt_ws" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/dt_ws"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/DoanhThu"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-td_ws, wsimport-client-dtngay_ws, wsimport-client-chitiethd_ws, wsimport-client-sp_ws, wsimport-client-tk_ws, wsimport-client-nv_ws, wsimport-client-login_ws, wsimport-client-hoadon_ws, wsimport-client-dt_ws"/>
+</project>

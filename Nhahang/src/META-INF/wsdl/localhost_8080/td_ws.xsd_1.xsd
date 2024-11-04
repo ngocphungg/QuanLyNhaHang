@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="findtd" type="tns:findtd"/>
+
+<xs:element name="findtdResponse" type="tns:findtdResponse"/>
+
+<xs:element name="getDeletetd" type="tns:getDeletetd"/>
+
+<xs:element name="getMenuItemsFromDatabase" type="tns:getMenuItemsFromDatabase"/>
+
+<xs:element name="getMenuItemsFromDatabaseResponse" type="tns:getMenuItemsFromDatabaseResponse"/>
+
+<xs:element name="getTheloai" type="tns:getTheloai"/>
+
+<xs:element name="getTheloaiResponse" type="tns:getTheloaiResponse"/>
+
+<xs:element name="getThemtd" type="tns:getThemtd"/>
+
+<xs:element name="getThucdon" type="tns:getThucdon"/>
+
+<xs:element name="getThucdonResponse" type="tns:getThucdonResponse"/>
+
+<xs:element name="getUpdatetd" type="tns:getUpdatetd"/>
+
+<xs:element name="giaMon" type="tns:giaMon"/>
+
+<xs:element name="giaMonResponse" type="tns:giaMonResponse"/>
+
+<xs:complexType name="findtd">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findtdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tdmodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tdmodel">
+<xs:sequence>
+<xs:element name="giathanh" type="xs:float"/>
+<xs:element name="loai" type="xs:string" minOccurs="0"/>
+<xs:element name="mamon" type="xs:string" minOccurs="0"/>
+<xs:element name="tenmon" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThemtd">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+<xs:element name="b" type="xs:string" minOccurs="0"/>
+<xs:element name="c" type="xs:string" minOccurs="0"/>
+<xs:element name="d" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUpdatetd">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+<xs:element name="b" type="xs:string" minOccurs="0"/>
+<xs:element name="c" type="xs:string" minOccurs="0"/>
+<xs:element name="d" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="giaMon">
+<xs:sequence>
+<xs:element name="tenmon" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="giaMonResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDeletetd">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMenuItemsFromDatabase">
+<xs:sequence>
+<xs:element name="theloai" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMenuItemsFromDatabaseResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTheloai">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTheloaiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:theloaimodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="theloaimodel">
+<xs:sequence>
+<xs:element name="theloai" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThucdon">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getThucdonResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tdmodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

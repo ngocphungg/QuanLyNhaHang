@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="addNewDoanhThuNgay" type="tns:addNewDoanhThuNgay"/>
+
+<xs:element name="getDoanhThuNgay" type="tns:getDoanhThuNgay"/>
+
+<xs:element name="getDoanhThuNgayResponse" type="tns:getDoanhThuNgayResponse"/>
+
+<xs:element name="getTongThuCuaNgay" type="tns:getTongThuCuaNgay"/>
+
+<xs:element name="getTongThuCuaNgayResponse" type="tns:getTongThuCuaNgayResponse"/>
+
+<xs:element name="isDateExistInDoanhThuNgay" type="tns:isDateExistInDoanhThuNgay"/>
+
+<xs:element name="isDateExistInDoanhThuNgayResponse" type="tns:isDateExistInDoanhThuNgayResponse"/>
+
+<xs:element name="updateTongTienDoanhThuNgay" type="tns:updateTongTienDoanhThuNgay"/>
+
+<xs:complexType name="updateTongTienDoanhThuNgay">
+<xs:sequence>
+<xs:element name="ngay" type="xs:int"/>
+<xs:element name="thang" type="xs:int"/>
+<xs:element name="nam" type="xs:int"/>
+<xs:element name="tongTien" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTongThuCuaNgay">
+<xs:sequence>
+<xs:element name="day" type="xs:int"/>
+<xs:element name="month" type="xs:int"/>
+<xs:element name="year" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTongThuCuaNgayResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNewDoanhThuNgay">
+<xs:sequence>
+<xs:element name="ngay" type="xs:int"/>
+<xs:element name="thang" type="xs:int"/>
+<xs:element name="nam" type="xs:int"/>
+<xs:element name="tongTien" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDoanhThuNgay">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDoanhThuNgayResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dtngaymodel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dtngaymodel">
+<xs:sequence>
+<xs:element name="nam" type="xs:int"/>
+<xs:element name="ngay" type="xs:int"/>
+<xs:element name="thang" type="xs:int"/>
+<xs:element name="tientheongay" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isDateExistInDoanhThuNgay">
+<xs:sequence>
+<xs:element name="ngay" type="xs:int"/>
+<xs:element name="thang" type="xs:int"/>
+<xs:element name="nam" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isDateExistInDoanhThuNgayResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
